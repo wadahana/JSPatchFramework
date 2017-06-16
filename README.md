@@ -3,8 +3,8 @@
 **转换JSPatch.js转换成C数组，集成到JPEngine**
 
 ````
->gcc bin2c.c -o bin2c
->./bin2c JSPatch/JSPatch.js > JSPatch/JSPatch.c
+$gcc bin2c.c -o bin2c
+$./bin2c JSPatch/JSPatch.js > JSPatch/JSPatch.c
 
 ````
 
