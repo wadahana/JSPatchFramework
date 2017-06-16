@@ -156,7 +156,11 @@ static NSArray *_JSLastCallStack;
 #endif
 
 static void (^_exceptionBlock)(NSString *log) = ^void(NSString *log) {
-    NSCAssert(NO, log);
+    if (_delegate && [_delegate respondsToSelector:@selector(JPEngineError:)]) {
+        [_delegate JPEngineError:log];
+    } else {
+        NSCAssert(NO, log);
+    }
 };
 
 @implementation JPEngine

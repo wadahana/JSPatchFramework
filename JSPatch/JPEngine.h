@@ -13,8 +13,8 @@
 @protocol JPEngineDelegate <NSObject>
 
 @optional
-- (void) JPEngineLog: (NSString *)content;
-
+- (void) JPEngineLog: (NSString *)message;
+- (void) JPEngineError: (NSString *)message;
 @end
 
 @interface JPEngine : NSObject
